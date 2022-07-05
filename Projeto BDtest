@@ -120,7 +120,7 @@ while init == True:
             conexao.commit() # Utilizar quando edita (Updade ou Delete) o BD
             Total = Total + Quantidade*Valor
             TotalItens = cont         
-            consulta = f'SELECT * FROM Product'  # DEMOSTRANDO A LISTA!!! VERIFICAR COMO MOSTRA SO A DO ID ESPECIFICO DA COMPRA
+            consulta = f'SELECT * FROM Product a JOIN Cart_Plist b ON b.Cp_id = a.P_id' # DEMOSTRANDO A LISTA!!! VERIFICAR COMO MOSTRA SO A DO ID ESPECIFICO DA COMPRA
             cursor.execute(consulta)
             resultado = cursor.fetchall()
             print(resultado, "\n")
